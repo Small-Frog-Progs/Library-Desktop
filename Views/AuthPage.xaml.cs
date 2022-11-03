@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Library.Controls;
 
 namespace Library.Views
 {
@@ -27,6 +28,22 @@ namespace Library.Views
 
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
+            if (String.IsNullOrEmpty(tbEmail.Text)||String.IsNullOrEmpty(tbPassword.Password))
+            {
+                MessageBox.Show("Не корректно введены данные!");
+                return;
+            }
+            Authorization authorization = new Authorization();
+            string resultSiganture = authorization.SignIn(tbEmail.Text, tbPassword.Password);
+            if (resultSiganture=="error")
+            {
+                MessageBox.Show("Неверные данные пользователя!");
+                return;
+            }
+
+            MessageBox.Show(resultSiganture);
+
+
 
         }
     }
