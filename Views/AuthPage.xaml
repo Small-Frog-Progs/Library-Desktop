@@ -31,8 +31,6 @@
                                 <Setter Property="Visibility" TargetName="WaterMark" Value="Visible"></Setter>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="#000011"/>
-                                <Setter Property="BorderThickness" TargetName="border" Value="1"/>
                                 <Setter Property="Cursor" Value="IBeam"></Setter>
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -46,6 +44,11 @@
             <RowDefinition Height="130"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="">
+                
+            </LinearGradientBrush>
+        </Grid.Background>
 
         <StackPanel Orientation="Horizontal"
                     VerticalAlignment="Center"
