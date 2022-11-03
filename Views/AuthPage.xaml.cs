@@ -24,5 +24,10 @@ namespace Library.Views
         {
             InitializeComponent();
         }
+
+        private void btnEnter_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

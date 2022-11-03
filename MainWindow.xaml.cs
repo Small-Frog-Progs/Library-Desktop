@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +24,13 @@ namespace Library
         public MainWindow()
         {
             InitializeComponent();
+
+            AuthFrame.Navigate(new AuthPage());
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
     }
 }
