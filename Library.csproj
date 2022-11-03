@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +56,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\AuthPage.xaml.cs">
+      <DependentUpon>AuthPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +71,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -93,6 +101,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_author.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_journal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_readers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_shelf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_tag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

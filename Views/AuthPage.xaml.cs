@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Library
+namespace Library.Views
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AuthPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AuthPage : Page
     {
-        public MainWindow()
+        public AuthPage()
         {
             InitializeComponent();
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
