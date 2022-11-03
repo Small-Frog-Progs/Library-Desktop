@@ -105,9 +105,10 @@
                 </Border.Background>
             </Border>
             <TextBlock Text="Библиотека.ру"
-                       FontSize="36"
+                       FontSize="42"
                        Margin="20,0,0,0"
-                       FontWeight="Medium"
+                       FontWeight="SemiBold"
+                       FontFamily="Calibri"
                        VerticalAlignment="Center"/>
         </StackPanel>
 
@@ -126,7 +127,8 @@
                     Content="Войти"
                     BorderThickness="0"
                     Foreground="Black"
-                    FontSize="20"/>
+                    FontSize="20"
+                    Click="btnEnter_Click"/>
         </StackPanel>
     </Grid>
 </Page>
