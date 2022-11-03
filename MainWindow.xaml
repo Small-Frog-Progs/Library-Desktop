@@ -5,52 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
-        Title="AuthWindow" Height="400" Width="600"
+        Title="MainWindow" Height="550" Width="1050"
         WindowStartupLocation="CenterScreen" WindowStyle="None">
-    <Window.Resources>
-        <Style x:Key="btnClose" TargetType="{x:Type Button}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" CornerRadius="12" BorderBrush="#000011" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
-                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Opacity" Value="0.7"/>
-                                <Setter Property="Background" TargetName="border">
-                                    <Setter.Value>
-                                        <ImageBrush ImageSource="Resources\close.png"/>
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
     <Grid>
-        <Grid>
-            <Grid>
-                <Frame x:Name="AuthFrame"/>
-            </Grid>
+        <Grid HorizontalAlignment="Left"
+              Width="250">
             
-            <StackPanel Orientation="Horizontal"
-                        FlowDirection="RightToLeft"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Top">
+        </Grid>
 
-                <Button x:Name="btnClose"
-                        Width="50" Height="50"
-                        BorderThickness="0"
-                        Style="{StaticResource btnClose}"
-                        Click="btnClose_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="Resources/close.png" RenderOptions.BitmapScalingMode="HighQuality"/>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
+        <Grid >
+            
         </Grid>
     </Grid>
 </Window>
