@@ -66,6 +66,7 @@
     <Compile Include="Controls\Authorization.cs" />
     <Compile Include="Controls\BookController.cs" />
     <Compile Include="Controls\UserController.cs" />
+    <Compile Include="FrameManager.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -76,6 +77,9 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Views\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookPage.xaml.cs">
+      <DependentUpon>BookPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\BooksPage.xaml.cs">
       <DependentUpon>BooksPage.xaml</DependentUpon>
@@ -103,6 +107,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
