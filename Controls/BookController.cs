@@ -22,10 +22,14 @@ namespace Library.Controls
             try
             {
 
-                var response = client.UploadValues(ServerAddress.SrvrAddres + "reader/index", "POST", param);
+                var response = client.UploadValues(ServerAddress.SrvrAddres + "book/index", "POST", param);
                 string result = Encoding.Default.GetString(response);
                 result = result.Trim();
                 List<Book> userData = JsonConvert.DeserializeObject<List<Book>>(result);
+                foreach (var item in userData)
+                {
+                    item.image_path = "http://192.168.43.246" + item.image_path;
+                }
                 return userData;
             }
             catch (Exception)

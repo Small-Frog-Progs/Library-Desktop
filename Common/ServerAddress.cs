@@ -9,5 +9,6 @@ namespace Library.Common
     public class ServerAddress
     {
         public static string SrvrAddres = "http://192.168.43.246/api/";
+        public static string ImagePath = "http://192.168.43.246";
     }
 }

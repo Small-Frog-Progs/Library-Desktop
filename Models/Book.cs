@@ -8,10 +8,16 @@ namespace Library.Models
 {
     public class Book
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string ShelfId { get; set; }
-        public bool IsDigit { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public int category { get; set; }
+        public string shelf { get; set; }
+        public string image_path { get; set; }
+        public int number_of_pages { get; set; }
+        public int is_digit { get; set; }
+        public object book_path { get; set; }
+        public string author { get; set; }
+        public string genre { get; set; }
 
 
 
