@@ -70,7 +70,8 @@
                         x:Name="btnDownload"
                         Height="40" Width="170"
                         Background="DarkBlue"
-                        Margin="0,30,0,0"/>
+                        Margin="0,30,0,0"
+                        Click="btnDownload_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

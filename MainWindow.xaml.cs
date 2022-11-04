@@ -25,6 +25,7 @@ namespace Library
             InitializeComponent();
 
             FrameManager.nainFrame = MainFrame;
+            txtUser.Text = Token.UserName;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

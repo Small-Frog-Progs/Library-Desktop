@@ -10,7 +10,7 @@
     <Page.Resources>
         <Style x:Name="txtStyle" TargetType="{x:Type TextBlock}">
             <Setter Property="FontFamily" Value="calibri"/>
-            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontSize" Value="28"/>
             <Setter Property="FontWeight" Value="Black"/>
         </Style>
     </Page.Resources>
@@ -105,16 +105,20 @@
                             <StackPanel Orientation="Horizontal"
                                         VerticalAlignment="Center">
                                 <TextBlock x:Name="txtId"
-                                           Text="Id"
+                                           FontSize="22"
+                                           Text="{Binding Id}"
                                            HorizontalAlignment="Left"
                                            Margin="0,0,70,0"/>
                                 <TextBlock x:Name="txtUser"
-                                           Text="User"
+                                           FontSize="22"
+                                           Margin="0,0,40,0"
+                                           Text="{Binding user_id}"
                                            HorizontalAlignment="Left"/>
                             </StackPanel>
                             
                             <TextBlock x:Name="txtBook"
-                                       Text="Book"
+                                       FontSize="22"
+                                       Text="{Binding book}"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"/>
                             
@@ -123,16 +127,18 @@
                                 <StackPanel Orientation="Vertical"
                                             Margin="0,0,60,0">
                                     <TextBlock x:Name="txtStartDate"
-                                               Text="StartDate"/>
+                                               FontSize="22"
+                                               Text="{Binding StringFormat= Дата получения: {0}, Path=start_date}"/>
                                     <TextBlock x:Name="txtEndDate"
-                                               Text="EndDate"/>
+                                               FontSize="22"
+                                               Text="{Binding StringFormat= Дата получения: {0}, Path=end_date}"/>
                                 </StackPanel>
 
                                 <ToggleButton x:Name="togReturn"
                                       Width="20" Height="20"
                                       BorderThickness="1"
                                       Margin="0,0,10,0"
-                                      IsChecked="{Binding }"
+                                      IsChecked="{Binding status}"
                                       Background="Transparent"
                                       Style="{DynamicResource togStyle}">
                                 </ToggleButton>

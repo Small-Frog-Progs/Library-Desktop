@@ -8,7 +8,8 @@ namespace Library.Common
 {
     public class Token
     {
-        public static string TokenString = "05W6PgfAHTDMsykNvLcrFrEitAqqaQeTzSgjL0CDNcTW3qnNwdbcfwFz3BZnCt7NievqG1sC9RYD5IIqPesSUcmtDpaaw3k0Xzdk";
+        //public static string TokenString = "05W6PgfAHTDMsykNvLcrFrEitAqqaQeTzSgjL0CDNcTW3qnNwdbcfwFz3BZnCt7NievqG1sC9RYD5IIqPesSUcmtDpaaw3k0Xzdk";
+        public static string TokenString;
         public static string UserId;
         public static string UserName;
         public static string UserEmail;

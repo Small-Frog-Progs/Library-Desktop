@@ -25,7 +25,8 @@ namespace Library
         {
             InitializeComponent();
 
-            AuthFrame.Navigate(new AuthPage());
+            AuthFrame.Navigate(new AuthPage(null));
+            FrameManager.win = this;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

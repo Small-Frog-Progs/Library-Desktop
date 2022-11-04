@@ -28,7 +28,7 @@ namespace Library.Controls
             try
             {
 
-                var response = client.UploadValues(ServerAddress.SrvrAddres + "api/login", "POST", param);
+                var response = client.UploadValues(ServerAddress.SrvrAddres + "login", "POST", param);
                 string result = Encoding.Default.GetString(response);
                 result = result.Trim();
                 BearerClass userData = JsonConvert.DeserializeObject<BearerClass>(result);

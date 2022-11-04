@@ -23,6 +23,9 @@ namespace Library.Views
         public JournalPage()
         {
             InitializeComponent();
+
+            Controls.JournalController controller = new Controls.JournalController();
+            listJournal.ItemsSource = controller.GetLogs();
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)

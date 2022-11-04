@@ -10,5 +10,6 @@ namespace Library
     public class FrameManager
     {
         public static Frame nainFrame;
+        public static AuthWindow win;
     }
 }

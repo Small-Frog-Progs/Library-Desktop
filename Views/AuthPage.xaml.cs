@@ -23,7 +23,7 @@ namespace Library.Views
     /// </summary>
     public partial class AuthPage : Page
     {
-        public AuthPage()
+        public AuthPage(AuthWindow win)
         {
             InitializeComponent();
         }
@@ -36,8 +36,11 @@ namespace Library.Views
                 return;
             }
             Authorization authorization = new Authorization();
+
             BearerClass resultSiganture = authorization.SignIn(tbEmail.Text, tbPassword.Password);
-            if (resultSiganture.id== "error")
+            MessageBox.Show(resultSiganture.Bearer);
+
+            if (resultSiganture.id == "error")
             {
                 MessageBox.Show("Неверные данные пользователя!");
                 return;
@@ -47,8 +50,9 @@ namespace Library.Views
             Token.UserName = resultSiganture.name;
             Token.UserEmail = resultSiganture.email;
 
-
-
+            MainWindow win = new MainWindow();
+            win.Show();
+            FrameManager.win.Close();
         }
     }
 }
