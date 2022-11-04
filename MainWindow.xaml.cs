@@ -23,6 +23,8 @@ namespace Library
         public MainWindow()
         {
             InitializeComponent();
+
+            FrameManager.nainFrame = MainFrame;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

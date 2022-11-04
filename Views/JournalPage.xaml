@@ -121,16 +121,21 @@
                             <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Right">
                                 <StackPanel Orientation="Vertical"
-                                            Margin="0,0,50,0">
+                                            Margin="0,0,60,0">
                                     <TextBlock x:Name="txtStartDate"
                                                Text="StartDate"/>
                                     <TextBlock x:Name="txtEndDate"
                                                Text="EndDate"/>
                                 </StackPanel>
-                                
-                                <TextBlock Text="Status"
-                                           x:Name="txtStatus"
-                                           VerticalAlignment="Center"/>
+
+                                <ToggleButton x:Name="togReturn"
+                                      Width="20" Height="20"
+                                      BorderThickness="1"
+                                      Margin="0,0,10,0"
+                                      IsChecked="{Binding }"
+                                      Background="Transparent"
+                                      Style="{DynamicResource togStyle}">
+                                </ToggleButton>
                             </StackPanel>
                         </Grid>
                     </DataTemplate>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,19 +21,27 @@ namespace Library.Views
     /// </summary>
     public partial class BooksPage : Page
     {
+        Controls.BookController controller = new Controls.BookController();
         public BooksPage()
         {
             InitializeComponent();
+
+            UpdateData();
+        }
+        private void UpdateData()
+        {
+            listBooks.ItemsSource = controller.GetBooks();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+            }
+            catch (Exception)
+            {
 
-        }
-
-        private void btnSave_Click(object sender, RoutedEventArgs e)
-        {
-
+            }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -48,6 +57,11 @@ namespace Library.Views
         private void tbNameSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void listBooks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            FrameManager.nainFrame.Navigate(new BookPage((Book)listBooks.SelectedItem));
         }
     }
 }
