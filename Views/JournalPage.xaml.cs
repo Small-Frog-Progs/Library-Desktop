@@ -10,28 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Library
+namespace Library.Views
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для JournalPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class JournalPage : Page
     {
-        public MainWindow()
+        public JournalPage()
         {
             InitializeComponent();
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void listMenu_Selected(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

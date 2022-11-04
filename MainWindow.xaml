@@ -7,14 +7,218 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="1050"
         WindowStartupLocation="CenterScreen" WindowStyle="None">
-    <Grid>
+    <Window.Resources>
+        <Style x:Key="menu_btn" TargetType="{x:Type ListViewItem}">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter></ContentPresenter>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#A64B00"></Setter>
+                                <Setter Property="Opacity" TargetName="border" Value="0.8"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#A64B00"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <ImageBrush x:Key="btnClose" ImageSource="Resources/cancel.png" Stretch="Uniform"></ImageBrush>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="15" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource btnClose}"/>
+                                <Setter Property="Opacity" TargetName="border" Value="0.7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="#FFBB00">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
         <Grid HorizontalAlignment="Left"
-              Width="250">
-            
+              Width="250"
+              Grid.RowSpan="2"
+              Background="#FF8C00">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Библиотека.ру"
+                       FontSize="38"
+                       FontFamily="Calibri"
+                       FontWeight="Bold"
+                       Margin="3,10,0,0"/>
+
+            <ListView x:Name="listMenu"
+                      Grid.Row="1"
+                      Background="Transparent"
+                      BorderThickness="0"
+                      Selected="listMenu_Selected">
+                <ListViewItem Style="{DynamicResource menu_btn}"
+                              BorderThickness="0">
+                    <StackPanel Orientation="Horizontal"
+                                Height="70">
+                        <Border Width="60"
+                                    Height="60">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Resources/image_journal.png"
+                                            Stretch="UniformToFill"
+                                            RenderOptions.BitmapScalingMode="HighQuality"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Text="Журнал"
+                                   FontSize="30"
+                                   FontFamily="Calibri"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   Margin="15,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Style="{DynamicResource menu_btn}">
+                    <StackPanel Orientation="Horizontal"
+                                Height="70">
+                        <Border Width="60"
+                                    Height="60">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Resources/image_book.png"
+                                            Stretch="UniformToFill"
+                                            RenderOptions.BitmapScalingMode="HighQuality"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Text="Книги"
+                                   FontSize="30"
+                                   FontFamily="Calibri"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   Margin="15,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Style="{DynamicResource menu_btn}">
+                    <StackPanel Orientation="Horizontal"
+                                Height="70">
+                        <Border Width="60"
+                                    Height="60">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Resources/image_readers.png"
+                                            Stretch="UniformToFill"
+                                            RenderOptions.BitmapScalingMode="HighQuality"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Text="Читатели"
+                                   FontSize="30"
+                                   FontFamily="Calibri"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   Margin="15,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Style="{DynamicResource menu_btn}">
+                    <StackPanel Orientation="Horizontal"
+                                Height="70">
+                        <Border Width="60"
+                                    Height="60">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Resources/image_author.png"
+                                            Stretch="UniformToFill"
+                                            RenderOptions.BitmapScalingMode="HighQuality"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Text="Авторы"
+                                   FontSize="30"
+                                   FontFamily="Calibri"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   Margin="15,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Style="{DynamicResource menu_btn}">
+                    <StackPanel Orientation="Horizontal"
+                                Height="70">
+                        <Border Width="60"
+                                    Height="60">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Resources/image_shelf.png"
+                                            Stretch="UniformToFill"
+                                            RenderOptions.BitmapScalingMode="HighQuality"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Text="Полки"
+                                   FontSize="30"
+                                   FontFamily="Calibri"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   Margin="15,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
         </Grid>
 
-        <Grid >
-            
+        <Grid Grid.Column="1"
+              Background="#FFBB00">
+            <StackPanel Orientation="Horizontal"
+                        FlowDirection="RightToLeft">
+                <Button x:Name="btnClose"
+                        Width="50"
+                        BorderBrush="Transparent"
+                        BorderThickness="4"
+                        Click="btnClose_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Resources/cancel.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtUser"
+                           Text="#User"
+                           FontSize="28"
+                           FontFamily="calibri"
+                           VerticalAlignment="Center"
+                           FontWeight="Black"
+                           Margin="15,0,0,0"/>
+                <Border BorderThickness="1"
+                        Width="50"
+                        CornerRadius="18"
+                        Margin="2">
+                    <Border.Background>
+                        <ImageBrush ImageSource="Resources/profile.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    </Border.Background>
+                    <Border.Effect>
+                        <DropShadowEffect Direction="240"
+                                          BlurRadius="4"
+                                          ShadowDepth="2"/>
+                    </Border.Effect>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1"
+              Grid.Column="1">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"
+                   BorderThickness="0"/>
         </Grid>
     </Grid>
 </Window>

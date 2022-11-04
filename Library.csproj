@@ -72,6 +72,9 @@
     <Compile Include="Views\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\JournalPage.xaml.cs">
+      <DependentUpon>JournalPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="AuthWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -89,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\JournalPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,28 +138,22 @@
     <None Include="Resources\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image_author.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image_book.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image_category.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image_journal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image_readers.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image_shelf.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image_tag.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\image_author.png" />
+    <Resource Include="Resources\image_book.png" />
+    <Resource Include="Resources\image_category.png" />
+    <Resource Include="Resources\image_journal.png" />
+    <Resource Include="Resources\image_readers.png" />
+    <Resource Include="Resources\image_shelf.png" />
+    <Resource Include="Resources\image_tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
