@@ -38,7 +38,7 @@ namespace Library.Views
             Authorization authorization = new Authorization();
 
             BearerClass resultSiganture = authorization.SignIn(tbEmail.Text, tbPassword.Password);
-            MessageBox.Show(resultSiganture.Bearer);
+            //MessageBox.Show(resultSiganture.Bearer);
 
             if (resultSiganture.id == "error")
             {

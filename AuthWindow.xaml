@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
         Title="AuthWindow" Height="400" Width="600"
-        WindowStartupLocation="CenterScreen" WindowStyle="None">
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="btnClose" TargetType="{x:Type Button}">
             <Setter Property="Template">
@@ -32,7 +32,7 @@
     </Window.Resources>
     <Grid>
         <Grid>
-            <Grid>
+            <Grid MouseDown="Grid_MouseDown">
                 <Frame x:Name="AuthFrame"/>
             </Grid>
             

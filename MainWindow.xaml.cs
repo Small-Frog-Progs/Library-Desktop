@@ -44,5 +44,10 @@ namespace Library
                     break;
             }
         }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

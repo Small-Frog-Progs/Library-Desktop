@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="1050"
-        WindowStartupLocation="CenterScreen" WindowStyle="None">
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="menu_btn" TargetType="{x:Type ListViewItem}">
             <Setter Property="BorderThickness" Value="0"/>
@@ -180,7 +180,8 @@
         </Grid>
 
         <Grid Grid.Column="1"
-              Background="#FFBB00">
+              Background="#FFBB00"
+              MouseDown="Grid_MouseDown">
             <StackPanel Orientation="Horizontal"
                         FlowDirection="RightToLeft">
                 <Button x:Name="btnClose"
