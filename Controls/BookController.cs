@@ -38,40 +38,26 @@ namespace Library.Controls
             }
         }
 
-        //public void CreateUser(string _userName, string _userEmail, string _birthDate, string _password)
-        //{
-        //    WebClient client = new WebClient();
-        //    NameValueCollection param = new NameValueCollection();
-        //    param.Add("name", _userName);
-        //    param.Add("password", _password);
-        //    param.Add("birth_date", _birthDate);
-        //    param.Add("email", _userEmail);
-        //    param.Add("token", Token.TokenString);
-        //    try
-        //    {
-        //        var response = client.UploadValues(ServerAddress.SrvrAddres + "register", "POST", param);
-        //        string result = Encoding.Default.GetString(response);
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return;
-        //    }
-        //}
+        public Book GetBookByID(string _bookID)
+        {
+            WebClient client = new WebClient();
+            NameValueCollection param = new NameValueCollection();
+            param.Add("token", Token.TokenString);
 
-        //public void DeleteUser(string _userID)
-        //{
-        //    WebClient client = new WebClient();
-        //    NameValueCollection param = new NameValueCollection();
-        //    param.Add("token", Token.TokenString);
-        //    try
-        //    {
-        //        var response = client.UploadValues(ServerAddress.SrvrAddres + "reader/" + _userID, "DELETE", param);
-        //        string result = Encoding.Default.GetString(response);
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return;
-        //    }
-        //}
+            try
+            {
+
+                var response = client.UploadValues(ServerAddress.SrvrAddres + "book/"+_bookID, "POST", param);
+                string result = Encoding.Default.GetString(response);
+                result = result.Trim();
+                Book book = JsonConvert.DeserializeObject<Book>(result);
+                return book;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
     }
 }

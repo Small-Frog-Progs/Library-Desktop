@@ -65,6 +65,7 @@
     <Compile Include="Controls\AuthorController.cs" />
     <Compile Include="Controls\Authorization.cs" />
     <Compile Include="Controls\BookController.cs" />
+    <Compile Include="Controls\JournalController.cs" />
     <Compile Include="Controls\UserController.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -72,6 +73,7 @@
     <Compile Include="Models\BearerClass.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\LogJournal.cs" />
     <Compile Include="Models\Shelf.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Views\AuthPage.xaml.cs">
