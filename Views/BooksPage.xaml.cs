@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace Library.Views
 {
     /// <summary>
-    /// Логика взаимодействия для JournalPage.xaml
+    /// Логика взаимодействия для BooksPage.xaml
     /// </summary>
-    public partial class JournalPage : Page
+    public partial class BooksPage : Page
     {
-        public JournalPage()
+        public BooksPage()
         {
             InitializeComponent();
-        }
-
-        private void btnSave_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -35,7 +30,22 @@ namespace Library.Views
 
         }
 
-        private void btnReset_Click(object sender, RoutedEventArgs e)
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void tbIdSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void tbNameSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
