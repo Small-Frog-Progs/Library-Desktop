@@ -11,8 +11,10 @@ namespace Library.Models
         public string Id { get; set; }
         public string Name { get; set; }
         public string ShelfId { get; set; }
-        
         public bool IsDigit { get; set; }
+
+
+
         //public string ReaderID { get; set; }
         //public string Categories { get; set; }
         //public string Tags { get; set; }

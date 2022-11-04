@@ -79,7 +79,7 @@
                       Grid.Row="1"
                       Background="Transparent"
                       BorderThickness="0"
-                      Selected="listMenu_Selected">
+                      >
                 <ListViewItem Style="{DynamicResource menu_btn}"
                               BorderThickness="0">
                     <StackPanel Orientation="Horizontal"

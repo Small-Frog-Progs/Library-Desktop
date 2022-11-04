@@ -64,6 +64,8 @@
     <Compile Include="Common\Token.cs" />
     <Compile Include="Controls\AuthorController.cs" />
     <Compile Include="Controls\Authorization.cs" />
+    <Compile Include="Controls\BookController.cs" />
+    <Compile Include="Controls\UserController.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>

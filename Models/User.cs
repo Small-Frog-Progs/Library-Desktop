@@ -8,11 +8,13 @@ namespace Library.Models
 {
     public class User
     {
-        public string Id { get; set; }
-        public string RegDate { get; set; }
-        public string FullName { get; set; }
-        public string Birthday { get; set; }
-        public string Email { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string email { get; set; }
+        public string birth_date { get; set; }
+
+
+
 
 
     }

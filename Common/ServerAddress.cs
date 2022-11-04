@@ -8,6 +8,6 @@ namespace Library.Common
 {
     public class ServerAddress
     {
-        public static string SrvrAddres = "http://192.168.43.246/";
+        public static string SrvrAddres = "http://192.168.43.246/api/";
     }
 }
