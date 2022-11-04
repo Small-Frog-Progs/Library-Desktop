@@ -13,65 +13,65 @@ namespace Library.Controls
 {
     public class AuthorController
     {
-        public List<Author> GetAuthors()
-        {
+        //public List<Author> GetAuthors()
+        //{
 
-            List<Author> _authorList = new List<Author>();
+        //    List<Author> _authorList = new List<Author>();
 
-            WebClient client = new WebClient();
-            NameValueCollection param = new NameValueCollection();
-            param.Add("email", _email);
-            param.Add("password", _pass);
-            try
-            {
+        //    WebClient client = new WebClient();
+        //    NameValueCollection param = new NameValueCollection();
+        //    param.Add("email", _email);
+        //    param.Add("password", _pass);
+        //    try
+        //    {
 
-                var response = client.UploadValues(ServerAddress.SrvrAddres + "api/login", "POST", param);
-                string result = Encoding.Default.GetString(response);
-                result = result.Trim();
-                return result;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
+        //        var response = client.UploadValues(ServerAddress.SrvrAddres + "api/login", "POST", param);
+        //        string result = Encoding.Default.GetString(response);
+        //        result = result.Trim();
+        //        return result;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return null;
+        //    }
+        //}
 
-        public object AddAuthor(string _nameAuthor)
-        {
-            WebClient client = new WebClient();
-            NameValueCollection param = new NameValueCollection();
-            param.Add("nameAuthor", _nameAuthor);
-            try
-            {
+        //public object AddAuthor(string _nameAuthor)
+        //{
+        //    WebClient client = new WebClient();
+        //    NameValueCollection param = new NameValueCollection();
+        //    param.Add("nameAuthor", _nameAuthor);
+        //    try
+        //    {
 
-                var response = client.UploadValues(ServerAddress.SrvrAddres + "api/login", "POST", param);
-                string result = Encoding.Default.GetString(response);
-                result = result.Trim();
-                return result;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
+        //        var response = client.UploadValues(ServerAddress.SrvrAddres + "api/login", "POST", param);
+        //        string result = Encoding.Default.GetString(response);
+        //        result = result.Trim();
+        //        return result;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return null;
+        //    }
+        //}
 
-        public string DeleteAuthor(string _id)
-        {
-            WebClient client = new WebClient();
-            NameValueCollection param = new NameValueCollection();
-            param.Add("id", _id);
-            try
-            {
+        //public string DeleteAuthor(string _id)
+        //{
+        //    WebClient client = new WebClient();
+        //    NameValueCollection param = new NameValueCollection();
+        //    param.Add("id", _id);
+        //    try
+        //    {
 
-                var response = client.UploadValues(ServerAddress.SrvrAddres + "api/login", "POST", param);
-                string result = Encoding.Default.GetString(response);
-                result = result.Trim();
-                return result;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
+        //        var response = client.UploadValues(ServerAddress.SrvrAddres + "api/login", "POST", param);
+        //        string result = Encoding.Default.GetString(response);
+        //        result = result.Trim();
+        //        return result;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return null;
+        //    }
+        //}
     }
 }

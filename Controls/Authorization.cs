@@ -19,7 +19,7 @@ namespace Library.Controls
         /// <param name="_email">Почта</param>
         /// <param name="_pass">Пароль</param>
         /// <returns></returns>
-        public string SignIn(string _email, string _pass)
+        public BearerClass SignIn(string _email, string _pass)
         {
             WebClient client = new WebClient();
             NameValueCollection param = new NameValueCollection();
@@ -32,7 +32,7 @@ namespace Library.Controls
                 string result = Encoding.Default.GetString(response);
                 result = result.Trim();
                 BearerClass userData = JsonConvert.DeserializeObject<BearerClass>(result);
-                return userData.Bearer;
+                return userData;
                 //return result;
             }
             catch (Exception)

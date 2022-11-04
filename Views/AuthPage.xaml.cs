@@ -12,7 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Library.Common;
 using Library.Controls;
+using Library.Models;
 
 namespace Library.Views
 {
@@ -34,14 +36,16 @@ namespace Library.Views
                 return;
             }
             Authorization authorization = new Authorization();
-            string resultSiganture = authorization.SignIn(tbEmail.Text, tbPassword.Password);
-            if (resultSiganture=="error")
+            BearerClass resultSiganture = authorization.SignIn(tbEmail.Text, tbPassword.Password);
+            if (resultSiganture.id== "error")
             {
                 MessageBox.Show("Неверные данные пользователя!");
                 return;
             }
-
-            MessageBox.Show(resultSiganture);
+            Token.TokenString = resultSiganture.Bearer;
+            Token.UserId = resultSiganture.id;
+            Token.UserName = resultSiganture.name;
+            Token.UserEmail = resultSiganture.email;
 
 
 
