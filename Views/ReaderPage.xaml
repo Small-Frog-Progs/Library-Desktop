@@ -22,10 +22,13 @@
                 <TextBox x:Name="tbName" Tag="полное имя"
                          Margin="7,0,10,0"
                          Width="290"/>
+                <TextBox x:Name="tbEmail" Tag="электронная почта"
+                         Margin="7,0,10,0"
+                         Width="290"/>
                 <StackPanel Margin="10,0,0,0">
                     <TextBlock Text="Дата рождения"
                                FontSize="20"/>
-                    <DatePicker x:Name="tbDateOfBirth"
+                    <DatePicker x:Name="dpDateOfBirth"
                          Width="140"/>
                 </StackPanel>
             </StackPanel>
@@ -75,22 +78,26 @@
                             <StackPanel Orientation="Horizontal"
                                         VerticalAlignment="Center">
                                 <TextBlock x:Name="txtId"
-                                           Text="Id"
+                                           FontSize="24"
+                                           Text="{Binding id}"
                                            HorizontalAlignment="Left"
                                            Margin="0,0,70,0"/>
                                 <TextBlock x:Name="txtName"
-                                           Text="Name"
+                                           FontSize="24"
+                                           Text="{Binding name}"
                                            HorizontalAlignment="Left"
                                            Margin="0,0,70,0"/>
                             </StackPanel>
 
                             <TextBlock x:Name="txtEmail"
-                                       Text="Email"
+                                       Text="{Binding email}"
+                                       FontSize="24"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"/>
 
                             <TextBlock x:Name="txtDateOfBirth"
-                                       Text="DateOfBirth"
+                                       FontSize="24"
+                                       Text="{Binding birth_date}"
                                        HorizontalAlignment="Right"
                                        VerticalAlignment="Center"/>
                         </Grid>
