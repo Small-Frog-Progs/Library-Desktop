@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,9 +30,16 @@ namespace Library
             Application.Current.Shutdown();
         }
 
-        private void listMenu_Selected(object sender, RoutedEventArgs e)
+        private void listMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            switch (listMenu.SelectedIndex)
+            {
+                case 0: MainFrame.Navigate(new Views.JournalPage()); break;
+                case 1: MainFrame.Navigate(new Views.BooksPage()); break;
+                case 2: MainFrame.Navigate(new Views.ReaderPage()); break;
+                default:
+                    break;
+            }
         }
     }
 }

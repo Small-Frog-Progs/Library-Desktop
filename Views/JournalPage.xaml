@@ -7,17 +7,151 @@
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="800"
       Title="JournalPage">
+    <Page.Resources>
+        <Style x:Name="txtStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontFamily" Value="calibri"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Black"/>
+        </Style>
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="70"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Grid>
             <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="tbId" Tag="Id"
+                         Margin="7,0,10,0"
+                         Width="50"/>
+                <TextBox x:Name="tbIdBook" Tag="Id книги"
+                         Margin="7,0,10,0"
+                         Width="140"/>
+                <TextBox x:Name="tbIdReader" Tag="Id читателя"
+                         Margin="7,0,10,0"
+                         Width="140"/>
                 
+                <StackPanel Orientation="Vertical"
+                            VerticalAlignment="Center"
+                            Margin="0,0,15,0">
+                    <TextBlock Text="Дата вручения"
+                               FontFamily="calibri"
+                               FontSize="16"/>
+                    <DatePicker x:Name="dpStartDate"
+                                Width="140"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Дата возврата"
+                               FontFamily="calibri"
+                               FontSize="16"/>
+                    <DatePicker x:Name="dpEndDate"
+                                Width="140"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical"
+                            VerticalAlignment="Center"
+                            Margin="10,0,0,0">
+                    <TextBlock Text="Возврвщена"
+                               FontSize="16"/>
+                    <ToggleButton x:Name="togReturn"
+                              Width="20" Height="20"
+                              BorderThickness="1"
+                              Margin="0,10,0,0"
+                                  Background="Transparent"
+                                  Style="{DynamicResource togStyle}">
+
+                    </ToggleButton>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0,-20,0,0">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnAdd"
+                        Margin="7,0,0,0"
+                        Width="170" Height="40"
+                        Content="Добавить запись"
+                        Style="{StaticResource btnStyly}"
+                        Click="btnAdd_Click"/>
+                <Button x:Name="btnSave"
+                        Margin="7,0,0,0"
+                        Width="140" Height="40"
+                        Content="Сохранить"
+                        Style="{StaticResource btnStyly}"
+                        Click="btnSave_Click"/>
+                <Button x:Name="btnReset"
+                        Margin="7,0,0,0"
+                        Width="140" Height="40"
+                        Content="Сбросить"
+                        Style="{StaticResource btnStyly}"
+                        Click="btnReset_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <ListView x:Name="listJournal"
+                      Padding="5"
+                      Background="Transparent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="760"
+                              Background="#FF9640">
+                            <StackPanel Orientation="Horizontal"
+                                        VerticalAlignment="Center">
+                                <TextBlock x:Name="txtId"
+                                           Text="Id"
+                                           HorizontalAlignment="Left"
+                                           Margin="0,0,70,0"/>
+                                <TextBlock x:Name="txtUser"
+                                           Text="User"
+                                           HorizontalAlignment="Left"/>
+                            </StackPanel>
+                            
+                            <TextBlock x:Name="txtBook"
+                                       Text="Book"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                            
+                            <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Right">
+                                <StackPanel Orientation="Vertical"
+                                            Margin="0,0,50,0">
+                                    <TextBlock x:Name="txtStartDate"
+                                               Text="StartDate"/>
+                                    <TextBlock x:Name="txtEndDate"
+                                               Text="EndDate"/>
+                                </StackPanel>
+                                
+                                <TextBlock Text="Status"
+                                           x:Name="txtStatus"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="tbIdSearch" Tag="поиск Id"
+                         Margin="7,0,10,0"
+                         Width="90"
+                         TextChanged="tbIdSearch_TextChanged"/>
+                <TextBox x:Name="tbIdBookSearch" Tag="поиск Id книги"
+                         Margin="7,0,10,0"
+                         Width="140"
+                         TextChanged="tbIdBookSearch_TextChanged"/>
+                <TextBox x:Name="tbIdReaderSearch" Tag="поиск Id читателя"
+                         Margin="7,0,10,0"
+                         Width="170"
+                         TextChanged="tbIdReaderSearch_TextChanged"/>
             </StackPanel>
         </Grid>
     </Grid>
