@@ -16,11 +16,43 @@ namespace Library.Controls
         /// <summary>
         /// Метод возвращает токен авторизации либо "error"
         /// </summary>
+        /// <param name="_email">Почта</param>
+        /// <param name="_pass">Пароль</param>
+        /// <returns></returns>
+        public BearerClass SignIn(string _email, string _pass)
+        {
+            WebClient client = new WebClient();
+            NameValueCollection param = new NameValueCollection();
+            param.Add("email", _email);
+            param.Add("password", _pass);
+            try
+            {
+
+                var response = client.UploadValues(ServerAddress.SrvrAddres + "api/login", "POST", param);
+                string result = Encoding.Default.GetString(response);
+                result = result.Trim();
+                BearerClass userData = JsonConvert.DeserializeObject<BearerClass>(result);
+                return userData;
+                //return result;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+
+        /// <summary>
+        /// Не активный метод регистрации
+        /// </summary>
         /// <param name="_email"></param>
         /// <param name="_pass"></param>
         /// <returns></returns>
-        public string SignIn(string _email, string _pass)
+        public string SignUn(string _email, string _pass)
         {
+            return null;
+
+
             WebClient client = new WebClient();
             NameValueCollection param = new NameValueCollection();
             param.Add("email", _email);

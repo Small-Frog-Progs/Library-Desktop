@@ -59,7 +59,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Common\ImageResizer.cs" />
     <Compile Include="Common\ServerAddress.cs" />
+    <Compile Include="Common\Token.cs" />
+    <Compile Include="Controls\AuthorController.cs" />
     <Compile Include="Controls\Authorization.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
