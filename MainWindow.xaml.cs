@@ -36,6 +36,7 @@ namespace Library
             {
                 case 0: MainFrame.Navigate(new Views.JournalPage()); break;
                 case 1: MainFrame.Navigate(new Views.BooksPage()); break;
+                case 2: MainFrame.Navigate(new Views.ReaderPage()); break;
                 default:
                     break;
             }

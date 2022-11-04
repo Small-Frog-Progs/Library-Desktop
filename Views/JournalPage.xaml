@@ -142,13 +142,16 @@
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="tbIdSearch" Tag="поиск Id"
                          Margin="7,0,10,0"
-                         Width="90"/>
+                         Width="90"
+                         TextChanged="tbIdSearch_TextChanged"/>
                 <TextBox x:Name="tbIdBookSearch" Tag="поиск Id книги"
                          Margin="7,0,10,0"
-                         Width="140"/>
+                         Width="140"
+                         TextChanged="tbIdBookSearch_TextChanged"/>
                 <TextBox x:Name="tbIdReaderSearch" Tag="поиск Id читателя"
                          Margin="7,0,10,0"
-                         Width="170"/>
+                         Width="170"
+                         TextChanged="tbIdReaderSearch_TextChanged"/>
             </StackPanel>
         </Grid>
     </Grid>

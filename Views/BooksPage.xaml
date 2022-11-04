@@ -75,12 +75,27 @@
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="tbIdSearch"
                             Width="190" Margin="10,0,0,0"
-                            Tag="поиск по if"
+                            Tag="поиск по id"
                          TextChanged="tbIdSearch_TextChanged"/>
                 <TextBox x:Name="tbNameSearch"
                     Width="190" Margin="10,0,0,0"
                      Tag="поиск по названию"
                          TextChanged="tbNameSearch_TextChanged"/>
+
+                <StackPanel Orientation="Vertical"
+                            VerticalAlignment="Center"
+                            Margin="30,0,0,0">
+                    <TextBlock Text="Электронная"
+                               FontSize="16"/>
+                    <ToggleButton x:Name="togIsDigit"
+                              Width="20" Height="20"
+                              BorderThickness="1"
+                              Margin="0,10,0,0"
+                                  Background="Transparent"
+                                  Style="{DynamicResource togStyle}">
+
+                    </ToggleButton>
+                </StackPanel>
             </StackPanel>
         </Grid>
 
